@@ -83,7 +83,7 @@ export interface Table {
   rows: (string | L)[][]
 }
 
-export type GroupId = 'litery' | 'przypadki' | 'liczebnik' | 'przymiotnik' | 'czasownik' | 'przyimek' | 'zaimek' | 'przyslowek' | 'spojnik' | 'zdanie'
+export type GroupId = 'litery' | 'przypadki' | 'liczebnik' | 'przymiotnik' | 'czasownik' | 'przyimek' | 'zaimek' | 'przyslowek' | 'spojnik' | 'zdanie' | 'rzeczownik' | 'partykula' | 'czesci' | 'slowotworstwo' | 'frazeologia'
 
 export interface Exercise {
   slug: string

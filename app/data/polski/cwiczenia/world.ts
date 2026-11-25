@@ -8,7 +8,7 @@ import type { L } from '~/types/content'
  * W tekstach [x] = litera / końcówka na czerwono.
  */
 
-export type AnimalKind = 'jez' | 'zaba' | 'chomik' | 'kot' | 'sowa' | 'kaczka' | 'waz' | 'wiewiorka' | 'kameleon' | 'bobr' | 'mysz' | 'papuga' | 'slimak' | 'pajak' | 'mrowka' | 'zyrafa'
+export type AnimalKind = 'jez' | 'zaba' | 'chomik' | 'kot' | 'sowa' | 'kaczka' | 'waz' | 'wiewiorka' | 'kameleon' | 'bobr' | 'mysz' | 'papuga' | 'slimak' | 'pajak' | 'mrowka' | 'zyrafa' | 'lis' | 'kogut' | 'lew' | 'kret' | 'malpka'
 
 const l = (pl: string, uk: string, ru: string): L => ({ pl, uk, ru })
 
@@ -200,6 +200,61 @@ export const lands: Record<string, Land> = {
       'Hej! Jestem Marta. Mrówki budują razem — a słowa razem budują zdanie! [Kto?] [Co robi?] [Gdzie?] Z takich cegiełek zrobimy wielkie mrowisko.',
       'Гей! Я Марта. Мурашки будують разом — а слова разом будують речення! [Хто?] [Що робить?] [Де?] З таких цеглинок збудуємо великий мурашник.',
       'Эй! Я Марта. Муравьи строят вместе — а слова вместе строят предложение! [Кто?] [Что делает?] [Где?] Из таких кирпичиков построим большой муравейник.'
+    )
+  },
+  rzeczownik: {
+    name: l('Lisia Nora', 'Лисяча Нора', 'Лисья Нора'),
+    animal: 'lis', guide: 'Lis Leon',
+    sky: '#ffe4cc', ground: '#e8b27a', ground2: '#c98a4a',
+    deco: ['🍁', '🌲', '🍄', '🦔', '🍂'],
+    hello: l(
+      'Cześć! Jestem Leon, lis. Uwielbiam nazywać wszystko dookoła: [las], [nora], [przyjaciel], [radość]! Takie słowa to rzeczowniki. Kto? Co? — pytam ja.',
+      'Привіт! Я Леон, лис. Обожнюю називати все довкола: [las], [nora], [przyjaciel], [radość]! Такі слова — іменники. Хто? Що? — питаю я.',
+      'Привет! Я Леон, лис. Обожаю называть всё вокруг: [las], [nora], [przyjaciel], [radość]! Такие слова — существительные. Кто? Что? — спрашиваю я.'
+    )
+  },
+  partykuly: {
+    name: l('Wesoły Kurnik', 'Веселий Курник', 'Весёлый Курятник'),
+    animal: 'kogut', guide: 'Kogut Kuba',
+    sky: '#fff1c9', ground: '#b8e07a', ground2: '#8fc04a',
+    deco: ['🌻', '🐣', '🌾', '🥚', '🌞'],
+    hello: l(
+      '[Kukuryku]! Jestem Kuba. To, co krzyczę rano, to wykrzyknik! [Au], [hura], [brr] — też. A małe słówka [czy], [niech], [tylko] to partykuły.',
+      '[Kukuryku]! Я Куба. Те, що я кричу зранку, — вигук! [Au], [hura], [brr] — теж. А маленькі слівця [czy], [niech], [tylko] — частки.',
+      '[Kukuryku]! Я Куба. То, что я кричу утром, — междометие! [Au], [hura], [brr] — тоже. А маленькие слова [czy], [niech], [tylko] — частицы.'
+    )
+  },
+  'czesci-mowy': {
+    name: l('Arena Części Mowy', 'Арена Частин Мови', 'Арена Частей Речи'),
+    animal: 'lew', guide: 'Lew Leopold',
+    sky: '#ffe0b0', ground: '#e9c46a', ground2: '#c99a3a',
+    deco: ['🏆', '🎺', '🚩', '⭐', '🎪'],
+    hello: l(
+      'Witaj na arenie! Jestem Leopold, lew. Dziesięć części mowy staje do turnieju: rzeczownik, czasownik, przymiotnik… Rozpoznasz każdą — zostaniesz [królem]!',
+      'Вітаю на арені! Я Леопольд, лев. Десять частин мови виходять на турнір: іменник, дієслово, прикметник… Впізнаєш кожну — станеш [королем]!',
+      'Добро пожаловать на арену! Я Леопольд, лев. Десять частей речи выходят на турнир: существительное, глагол, прилагательное… Узнаешь каждую — станешь [королём]!'
+    )
+  },
+  slowotworstwo: {
+    name: l('Kopalnia Słów', 'Копальня Слів', 'Шахта Слов'),
+    animal: 'kret', guide: 'Kret Kazik',
+    sky: '#e8dccb', ground: '#a98463', ground2: '#7d5c40',
+    deco: ['💎', '🪨', '🌱', '🔦', '⛏️'],
+    hello: l(
+      'Hej! Jestem Kazik, kret. Kopię głęboko i znajduję korzenie słów: [dom] → [dom]ek → [dom]owy. Słowa też mają rodziny!',
+      'Гей! Я Казик, кріт. Копаю глибоко й знаходжу корені слів: [dom] → [dom]ek → [dom]owy. Слова теж мають родини!',
+      'Эй! Я Казик, крот. Копаю глубоко и нахожу корни слов: [dom] → [dom]ek → [dom]owy. У слов тоже есть семьи!'
+    )
+  },
+  frazeologia: {
+    name: l('Teatr Powiedzonek', 'Театр Висловів', 'Театр Выражений'),
+    animal: 'malpka', guide: 'Małpka Mia',
+    sky: '#f3dcff', ground: '#d6a6f0', ground2: '#a974cc',
+    deco: ['🎭', '🍌', '🎪', '🎈', '⭐'],
+    hello: l(
+      'Ha-ha! Jestem Mia. Lubię żarty ze słowami: „mieć [muchy w nosie]” wcale nie znaczy, że w nosie są muchy! Zobacz, co naprawdę znaczą powiedzonka.',
+      'Ха-ха! Я Мія. Люблю жарти зі словами: «mieć [muchy w nosie]» зовсім не означає, що в носі мухи! Подивись, що насправді означають вислови.',
+      'Ха-ха! Я Мия. Люблю шутки со словами: «mieć [muchy w nosie]» вовсе не значит, что в носу мухи! Посмотри, что на самом деле значат выражения.'
     )
   }
 }
@@ -632,6 +687,84 @@ export const explain: Record<string, L[]> = {
   'zdanie:zlozone': [
     l('Policz czasowniki jak mrówki: jeden — pojedyncze, dwa — złożone.', 'Порахуй дієслова, як мурашок: одне — просте, два — складне.', 'Посчитай глаголы, как муравьёв: один — простое, два — сложное.'),
     l('W złożonym często jest przecinek i spójnik: Kot [śpi], a pies [szczeka].', 'У складному часто є кома і сполучник: Kot [śpi], a pies [szczeka].', 'В сложном часто есть запятая и союз: Kot [śpi], a pies [szczeka].')
+  ],
+
+  /* ---------- RZECZOWNIK ---------- */
+  'rzeczownik:co': [
+    l('Zapytaj: kto to? — [lis], [mama]. Co to? — [stół], [jabłko]. To rzeczowniki!', 'Запитай: хто це? — [lis], [mama]. Що це? — [stół], [jabłko]. Це іменники!', 'Спроси: кто это? — [lis], [mama]. Что это? — [stół], [jabłko]. Это существительные!'),
+    l('Rzeczowniki nazywają też to, czego nie dotkniesz: [radość], [przyjaźń], [strach].', 'Іменники називають і те, чого не торкнешся: [radość], [przyjaźń], [strach].', 'Существительные называют и то, чего не потрогаешь: [radość], [przyjaźń], [strach].')
+  ],
+  'rzeczownik:rodzaj': [
+    l('Najprostszy test: powiedz [ten], [ta] albo [to] przed słowem. Ten kot, ta mama, to okno.', 'Найпростіший тест: скажи [ten], [ta] або [to] перед словом. Ten kot, ta mama, to okno.', 'Самый простой тест: скажи [ten], [ta] или [to] перед словом. Ten kot, ta mama, to okno.'),
+    l('Uwaga, pułapki! [Ten] pies, [ten] tata, [ta] noc, [to] imię.', 'Увага, пастки! [Ten] pies (пес — чоловічий!), [ten] tata, [ta] noc, [to] imię.', 'Внимание, ловушки! [Ten] pies (по-польски мужской!), [ten] tata, [ta] noc, [to] imię.')
+  ],
+  'rzeczownik:liczba': [
+    l('Jeden — liczba pojedyncza. Dużo — liczba mnoga: kot → kot[y], mama → mam[y], okno → okn[a].', 'Один — однина. Багато — множина: kot → kot[y], mama → mam[y], okno → okn[a].', 'Один — единственное число. Много — множественное: kot → kot[y], mama → mam[y], okno → okn[a].'),
+    l('Łobuzy do zapamiętania: [dzieci], [ludzie], [oczy], [uszy], [ręce], [bracia].', 'Розбишаки, яких треба запам’ятати: [dzieci], [ludzie], [oczy], [uszy], [ręce], [bracia].', 'Хулиганы, которых надо запомнить: [dzieci], [ludzie], [oczy], [uszy], [ręce], [bracia].')
+  ],
+  'rzeczownik:wlasne': [
+    l('Pies to każdy pies. A [B]urek — tylko ten jeden, nasz! Imię jednej rzeczy to nazwa własna.', 'Pies — будь-який пес. А [B]urek — тільки цей один, наш! Ім’я однієї речі — власна назва.', 'Pies — любая собака. А [B]urek — только эта одна, наша! Имя одной вещи — имя собственное.'),
+    l('Nazwy własne piszemy wielką literą: [W]arszawa, [W]isła, [A]nna.', 'Власні назви пишемо з великої: [W]arszawa, [W]isła, [A]nna.', 'Имена собственные пишем с заглавной: [W]arszawa, [W]isła, [A]nna.')
+  ],
+
+  /* ---------- WYKRZYKNIKI I PARTYKUŁY ---------- */
+  'partykuly:emocje': [
+    l('Uderzyłeś się? — [Au]! Wygrałeś? — [Hura]! Zimno? — [Brr]! Wykrzyknik to uczucie w jednym słowie.', 'Вдарився? — [Au]! Виграв? — [Hura]! Холодно? — [Brr]! Вигук — це почуття в одному слові.', 'Ударился? — [Au]! Выиграл? — [Hura]! Холодно? — [Brr]! Междометие — это чувство в одном слове.'),
+    l('Wykrzyknik się nie odmienia i często stoi przed znakiem [!].', 'Вигук не змінюється і часто стоїть перед знаком [!].', 'Междометие не изменяется и часто стоит перед знаком [!].')
+  ],
+  'partykuly:zwierzeta': [
+    l('Ja mówię [kukuryku], kot — [miau], pies — [hau]. Te słowa naśladują dźwięki.', 'Я кажу [kukuryku], кіт — [miau], пес — [hau]. Ці слова наслідують звуки.', 'Я говорю [kukuryku], кот — [miau], собака — [hau]. Эти слова подражают звукам.'),
+    l('Polskie zwierzęta mówią trochę inaczej: żaba — [kum], świnka — [chrum]!', 'Польські тварини говорять трохи інакше: жаба — [kum], свинка — [chrum]!', 'Польские животные говорят немного иначе: лягушка — [kum], свинка — [chrum]!')
+  ],
+  'partykuly:partykuly': [
+    l('[Czy] zamienia zdanie w pytanie: Czy masz kota? [Niech] wyraża życzenie: Niech żyje!', '[Czy] перетворює речення на питання: Czy masz kota? [Niech] — побажання: Niech żyje!', '[Czy] превращает предложение в вопрос: Czy masz kota? [Niech] — пожелание: Niech żyje!'),
+    l('[Tylko] — i nic więcej. [Nawet] — i to też! [Właśnie] — dokładnie to.', '[Tylko] — лише. [Nawet] — навіть. [Właśnie] — саме це.', '[Tylko] — только. [Nawet] — даже. [Właśnie] — именно это.')
+  ],
+  'partykuly:by': [
+    l('Gdy marzysz, dodajesz [-by]: chciał[bym], pojechali[byśmy].', 'Коли мрієш, додаєш [-by]: chciał[bym] (я хотів би), pojechali[byśmy].', 'Когда мечтаешь, добавляешь [-by]: chciał[bym] (я хотел бы), pojechali[byśmy].'),
+    l('Po polsku -by przykleja się do czasownika — piszemy razem: [chciałbym], nie „chciał bym”.', 'Польською -by приклеюється до дієслова — пишемо разом: [chciałbym], а не «chciał bym».', 'По-польски -by приклеивается к глаголу — пишем слитно: [chciałbym], а не «chciał bym».')
+  ],
+
+  /* ---------- CZĘŚCI MOWY ---------- */
+  'czesci-mowy:odmienne': [
+    l('Odmienne słowa zmieniają końcówki: kot, kot[a], kot[em]; czyta[m], czyta[sz].', 'Змінні слова міняють закінчення: kot, kot[a], kot[em]; czyta[m], czyta[sz].', 'Изменяемые слова меняют окончания: kot, kot[a], kot[em]; czyta[m], czyta[sz].'),
+    l('Nieodmienne zawsze wyglądają tak samo: [szybko], [w], [i], [czy], [ach].', 'Незмінні завжди однакові: [szybko], [w], [i], [czy], [ach].', 'Неизменяемые всегда одинаковые: [szybko], [w], [i], [czy], [ach].')
+  ],
+  'czesci-mowy:odm': [
+    l('Pytania pomagają: kto? co? — [rzeczownik], co robi? — [czasownik], jaki? — [przymiotnik].', 'Питання допомагають: хто? що? — [іменник], що робить? — [дієслово], який? — [прикметник].', 'Вопросы помогают: кто? что? — [существительное], что делает? — [глагол], какой? — [прилагательное].'),
+    l('Ile? który? — [liczebnik]. A zamiast innego słowa: on, mój, ten — [zaimek].', 'Скільки? котрий? — [числівник]. А замість іншого слова: on, mój, ten — [займенник].', 'Сколько? который? — [числительное]. А вместо другого слова: on, mój, ten — [местоимение].')
+  ],
+  'czesci-mowy:nieodm': [
+    l('Jak? gdzie? kiedy? — [przysłówek]. Małe słowo przed rzeczownikiem (w, na, do) — [przyimek].', 'Як? де? коли? — [прислівник]. Маленьке слово перед іменником (w, na, do) — [прийменник].', 'Как? где? когда? — [наречие]. Маленькое слово перед существительным (w, na, do) — [предлог].'),
+    l('Łączy (i, ale, bo) — [spójnik]. Dodaje odcień (czy, niech) — [partykuła]. Okrzyk (au, hura) — [wykrzyknik].', 'З’єднує (i, ale, bo) — [сполучник]. Додає відтінок (czy, niech) — [частка]. Вигук (au, hura) — [вигук].', 'Соединяет (i, ale, bo) — [союз]. Добавляет оттенок (czy, niech) — [частица]. Возглас (au, hura) — [междометие].')
+  ],
+
+  /* ---------- SŁOWOTWÓRSTWO ---------- */
+  'slowotworstwo:rodzina': [
+    l('Kopię i znajduję rdzeń — wspólną część: [las], [leś]ny, [las]ek. To jedna rodzina!', 'Копаю й знаходжу корінь — спільну частину: [las], [leś]ny, [las]ek. Це одна родина!', 'Копаю и нахожу корень — общую часть: [las], [leś]ny, [las]ek. Это одна семья!'),
+    l('Uwaga na podobne słowa: [lis] wygląda jak las, ale to inna rodzina!', 'Обережно зі схожими словами: [lis] схожий на las, але це інша родина!', 'Осторожно с похожими словами: [lis] похож на las, но это другая семья!')
+  ],
+  'slowotworstwo:zdrobnienia': [
+    l('Gdy coś jest małe i miłe, dodajemy końcówkę: kot → kot[ek], dom → dom[ek].', 'Коли щось маленьке й миле, додаємо закінчення: kot → kot[ek], dom → dom[ek].', 'Когда что-то маленькое и милое, добавляем окончание: kot → kot[ek], dom → dom[ek].'),
+    l('Czasem litery się zmieniają: noga → nó[ż]ka, ręka → rą[cz]ka, słońce → słone[cz]ko.', 'Іноді літери змінюються: noga → nó[ż]ka, ręka → rą[cz]ka, słońce → słone[cz]ko.', 'Иногда буквы меняются: noga → nó[ż]ka, ręka → rą[cz]ka, słońce → słone[cz]ko.')
+  ],
+  'slowotworstwo:przedrostki': [
+    l('Ten sam czasownik, inny początek: [wy]jść (na dwór), [w]ejść (do środka), [przy]jść (do nas).', 'Те саме дієслово, інший початок: [wy]jść (вийти), [w]ejść (увійти), [przy]jść (прийти).', 'Тот же глагол, другое начало: [wy]jść (выйти), [w]ejść (войти), [przy]jść (прийти).'),
+    l('[Od]jechać — oddalić się. [Pod]ejść — zbliżyć się. Jak po ukraińsku: від-, під-!', '[Od]jechać — від’їхати. [Pod]ejść — підійти. Як українською: від-, під-!', '[Od]jechać — отъехать. [Pod]ejść — подойти. Как по-русски: от-, под-!')
+  ],
+  'slowotworstwo:kto': [
+    l('Kto piecze? — pie[karz]. Kto leczy? — le[karz]. Końcówka -arz często oznacza zawód.', 'Хто пече? — pie[karz]. Хто лікує? — le[karz]. Закінчення -arz часто означає професію.', 'Кто печёт? — pie[karz]. Кто лечит? — le[karz]. Окончание -arz часто обозначает профессию.'),
+    l('Inne: naucz[yciel], kierow[ca], sprzedaw[ca], ryb[ak].', 'Інші: naucz[yciel], kierow[ca], sprzedaw[ca], ryb[ak].', 'Другие: naucz[yciel], kierow[ca], sprzedaw[ca], ryb[ak].')
+  ],
+
+  /* ---------- FRAZEOLOGIA ---------- */
+  'frazeologia:znaczenie': [
+    l('„[Bułka z masłem]” — nie chodzi o jedzenie! To znaczy: coś bardzo łatwego.', '«[Bułka z masłem]» — це не про їжу! Означає: щось дуже легке, «раз плюнути».', '«[Bułka z masłem]» — это не про еду! Значит: что-то очень лёгкое, «проще простого».'),
+    l('„[Wziąć nogi za pas]” — szybko uciec. „[Mieć głowę na karku]” — być mądrym.', '«[Wziąć nogi za pas]» — швидко втекти. «[Mieć głowę na karku]» — бути розумним.', '«[Wziąć nogi za pas]» — быстро убежать. «[Mieć głowę na karku]» — быть умным.')
+  ],
+  'frazeologia:uzupelnij': [
+    l('W powiedzonku każde słowo ma swoje miejsce: „głodny jak [wilk]”, nie „jak lis”.', 'У вислові кожне слово на своєму місці: «głodny jak [wilk]», а не «jak lis».', 'В выражении каждое слово на своём месте: «głodny jak [wilk]», а не «jak lis».'),
+    l('Wiele powiedzonek ma ukraińskich braci: „kamień spadł z [serca]” = камінь з душі впав.', 'Багато висловів мають українських братів: «kamień spadł z [serca]» = камінь з душі впав.', 'У многих выражений есть русские братья: «kamień spadł z [serca]» = камень с души упал.')
   ],
 
   /* ---------- PRZYPADKI ---------- */

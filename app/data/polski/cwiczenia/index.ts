@@ -12,6 +12,10 @@ import { przyslowkiExercise } from './przyslowki'
 import { spojnikiExercise } from './spojniki'
 import { zdanieExercise } from './zdanie'
 import { wielkaExercise } from './wielka'
+import { rzeczownikExercise } from './rzeczownik'
+import { partykulyExercise } from './partykuly'
+import { czesciExercise } from './czesci'
+import { frazeologiaExercise, slowotworstwoExercise } from './slowa'
 import { przypadkiExercise } from './przypadki'
 import { explain, lands, marks } from './world'
 
@@ -22,8 +26,9 @@ export type { AnimalKind, Land } from './world'
 /** Wszystkie ćwiczenia (bez podziału na klasy). Kolejność = kolejność na stronie. */
 export const exercises: Exercise[] = [
   ouExercise, rzExercise, chExercise, ccExercise, eaExercise, wielkaExercise, mixExercise,
-  przypadkiExercise, przymiotnikiExercise, czasownikiExercise, liczebnikiExercise,
-  zaimkiExercise, przyslowkiExercise, przyimkiExercise, spojnikiExercise, zdanieExercise
+  rzeczownikExercise, przypadkiExercise, przymiotnikiExercise, czasownikiExercise, liczebnikiExercise,
+  zaimkiExercise, przyslowkiExercise, przyimkiExercise, spojnikiExercise, partykulyExercise,
+  czesciExercise, zdanieExercise, slowotworstwoExercise, frazeologiaExercise
 ].map(ex => ({
   ...ex,
   land: lands[ex.slug],

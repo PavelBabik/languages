@@ -42,6 +42,11 @@ const face = computed(() => {
     case 'kaczka': return { eyes: [[57, 52], [83, 52]], mouth: [70, 0], cheeks: [[44, 66], [96, 66]], r: 5.5 }
     case 'waz': return { eyes: [[57, 52], [83, 52]], mouth: [70, 72], cheeks: [[45, 64], [95, 64]], r: 6.5 }
     case 'wiewiorka': return { eyes: [[50, 60], [74, 60]], mouth: [62, 82], cheeks: [[38, 74], [86, 74]], r: 5.5 }
+    case 'lis': return { eyes: [[57, 64], [83, 64]], mouth: [70, 88], cheeks: [[44, 80], [96, 80]], r: 5.5 }
+    case 'kogut': return { eyes: [[58, 50], [82, 50]], mouth: [70, 0], cheeks: [[48, 62], [92, 62]], r: 5.5 }
+    case 'lew': return { eyes: [[58, 62], [82, 62]], mouth: [70, 86], cheeks: [[46, 76], [94, 76]], r: 6 }
+    case 'kret': return { eyes: [[57, 60], [83, 60]], mouth: [70, 90], cheeks: [[44, 74], [96, 74]], r: 4 }
+    case 'malpka': return { eyes: [[59, 60], [81, 60]], mouth: [70, 84], cheeks: [[50, 74], [90, 74]], r: 5.5 }
     case 'mysz': return { eyes: [[59, 72], [81, 72]], mouth: [70, 90], cheeks: [[47, 84], [93, 84]], r: 5.5 }
     case 'papuga': return { eyes: [[58, 46], [82, 46]], mouth: [70, 0], cheeks: [[48, 58], [92, 58]], r: 5.5 }
     case 'slimak': return { eyes: [[28, 40], [50, 38]], mouth: [38, 88], cheeks: [[24, 82], [52, 82]], r: 5 }
@@ -185,6 +190,83 @@ const face = computed(() => {
         <path d="M52 106 Q62 96 72 106 Z" fill="#7a4b22" :stroke="INK" stroke-width="2.5" stroke-linejoin="round" />
         <ellipse cx="50" cy="110" rx="6" ry="5" fill="#e8913f" :stroke="INK" stroke-width="2.5" />
         <ellipse cx="74" cy="110" rx="6" ry="5" fill="#e8913f" :stroke="INK" stroke-width="2.5" />
+      </template>
+
+      <!-- ================= LIS ================= -->
+      <template v-else-if="kind === 'lis'">
+        <path d="M92 118 C130 120 136 80 118 64 C112 92 100 104 86 108 Z" fill="#ff8a3d" :stroke="INK" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M118 64 C126 72 128 84 124 94 C118 86 116 76 118 64 Z" fill="#fff" :stroke="INK" stroke-width="2.5" stroke-linejoin="round" />
+        <ellipse cx="68" cy="112" rx="28" ry="20" fill="#ff8a3d" :stroke="INK" stroke-width="3.5" />
+        <ellipse cx="68" cy="116" rx="15" ry="13" fill="#fff4e6" />
+        <path d="M36 50 L32 16 L58 36 Z" fill="#ff8a3d" :stroke="INK" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M104 50 L108 16 L82 36 Z" fill="#ff8a3d" :stroke="INK" stroke-width="3.5" stroke-linejoin="round" />
+        <path d="M33 26 L32 16 L42 24 Z M107 26 L108 16 L98 24 Z" :fill="INK" />
+        <path d="M28 56 C28 34 50 30 70 30 C90 30 112 34 112 56 C112 76 92 96 70 96 C48 96 28 76 28 56 Z" fill="#ff9a4d" :stroke="INK" stroke-width="3.5" />
+        <path d="M30 62 C40 74 56 74 70 90 C84 74 100 74 110 62 C108 82 90 96 70 96 C50 96 32 82 30 62 Z" fill="#fff4e6" />
+        <ellipse cx="70" cy="80" rx="6" ry="4.5" :fill="INK" />
+      </template>
+
+      <!-- ================= KOGUT ================= -->
+      <template v-else-if="kind === 'kogut'">
+        <path d="M96 96 Q128 70 122 44 Q116 66 104 78 Z" fill="#3fbf73" :stroke="INK" stroke-width="3" stroke-linejoin="round" />
+        <path d="M98 100 Q132 90 134 62 Q122 82 104 88 Z" fill="#4d86ff" :stroke="INK" stroke-width="3" stroke-linejoin="round" />
+        <path d="M98 106 Q128 108 136 86 Q120 100 104 98 Z" fill="#ffb627" :stroke="INK" stroke-width="3" stroke-linejoin="round" />
+        <path d="M60 126 L56 138 M78 126 L82 138" stroke="#ffb627" stroke-width="5" stroke-linecap="round" />
+        <ellipse cx="68" cy="102" rx="32" ry="28" fill="#fff6e8" :stroke="INK" stroke-width="3.5" />
+        <path d="M48 98 Q60 112 80 104" fill="none" stroke="#e9d5b8" stroke-width="4" stroke-linecap="round" />
+        <path d="M54 26 Q56 10 64 20 Q68 6 76 20 Q84 10 86 28 Z" fill="#ff4d4d" :stroke="INK" stroke-width="3" stroke-linejoin="round" />
+        <circle cx="70" cy="50" r="26" fill="#fff6e8" :stroke="INK" stroke-width="3.5" />
+        <path d="M60 58 L70 54 L80 58 L70 70 Z" fill="#ffb627" :stroke="INK" stroke-width="3" stroke-linejoin="round" />
+        <path d="M66 70 Q62 82 70 84 Q78 82 74 70 Z" fill="#ff4d4d" :stroke="INK" stroke-width="2.5" stroke-linejoin="round" />
+      </template>
+
+      <!-- ================= LEW ================= -->
+      <template v-else-if="kind === 'lew'">
+        <path d="M104 120 C124 124 130 108 126 98" fill="none" :stroke="INK" stroke-width="4" stroke-linecap="round" />
+        <circle cx="126" cy="96" r="6" fill="#c9702a" :stroke="INK" stroke-width="2.5" />
+        <ellipse cx="70" cy="114" rx="30" ry="20" fill="#f6c453" :stroke="INK" stroke-width="3.5" />
+        <circle cx="70" cy="66" r="46" fill="#d9822b" :stroke="INK" stroke-width="3.5" />
+        <path d="M30 50 L24 40 M110 50 L116 40 M26 76 L16 78 M114 76 L124 78 M40 104 L32 112 M100 104 L108 112" :stroke="INK" stroke-width="3" stroke-linecap="round" />
+        <circle cx="48" cy="38" r="8" fill="#f6c453" :stroke="INK" stroke-width="3" />
+        <circle cx="92" cy="38" r="8" fill="#f6c453" :stroke="INK" stroke-width="3" />
+        <circle cx="70" cy="68" r="32" fill="#f8cf63" :stroke="INK" stroke-width="3.5" />
+        <ellipse cx="70" cy="80" rx="15" ry="10" fill="#fff0c2" />
+        <path d="M64 74 L76 74 L70 80 Z" fill="#7a4b22" :stroke="INK" stroke-width="2" stroke-linejoin="round" />
+        <!-- korona -->
+        <path d="M50 28 L54 12 L62 22 L70 8 L78 22 L86 12 L90 28 Z" fill="#ffd23f" :stroke="INK" stroke-width="3" stroke-linejoin="round" />
+        <circle cx="70" cy="22" r="3" fill="#ff4d6d" />
+      </template>
+
+      <!-- ================= KRET ================= -->
+      <template v-else-if="kind === 'kret'">
+        <ellipse cx="70" cy="108" rx="36" ry="26" fill="#4a4a5e" :stroke="INK" stroke-width="3.5" />
+        <ellipse cx="38" cy="114" rx="12" ry="8" fill="#ffb3c6" :stroke="INK" stroke-width="2.5" />
+        <ellipse cx="102" cy="114" rx="12" ry="8" fill="#ffb3c6" :stroke="INK" stroke-width="2.5" />
+        <path d="M30 112 L26 118 M34 116 L30 122 M110 112 L114 118 M106 116 L110 122" :stroke="INK" stroke-width="2" stroke-linecap="round" />
+        <circle cx="70" cy="66" r="34" fill="#5a5a70" :stroke="INK" stroke-width="3.5" />
+        <ellipse cx="70" cy="80" rx="12" ry="9" fill="#ff8fab" :stroke="INK" stroke-width="2.5" />
+        <!-- kask górnika -->
+        <path d="M38 50 Q70 14 102 50 Z" fill="#ffd23f" :stroke="INK" stroke-width="3" stroke-linejoin="round" />
+        <rect x="34" y="47" width="72" height="7" rx="3" fill="#ffd23f" :stroke="INK" stroke-width="2.5" />
+        <circle cx="70" cy="36" r="7" fill="#fffbe0" :stroke="INK" stroke-width="2.5" />
+        <path d="M70 26 L70 18 M62 28 L56 22 M78 28 L84 22" stroke="#ffd23f" stroke-width="2.5" stroke-linecap="round" />
+      </template>
+
+      <!-- ================= MAŁPKA ================= -->
+      <template v-else-if="kind === 'malpka'">
+        <path d="M96 118 C126 122 130 92 112 88 C104 86 102 98 110 100" fill="none" :stroke="INK" stroke-width="9" stroke-linecap="round" />
+        <path d="M96 118 C126 122 130 92 112 88 C104 86 102 98 110 100" fill="none" stroke="#a0673c" stroke-width="4" stroke-linecap="round" />
+        <ellipse cx="70" cy="112" rx="28" ry="20" fill="#a0673c" :stroke="INK" stroke-width="3.5" />
+        <ellipse cx="70" cy="116" rx="16" ry="13" fill="#f0c99a" />
+        <circle cx="32" cy="62" r="14" fill="#a0673c" :stroke="INK" stroke-width="3.5" />
+        <circle cx="108" cy="62" r="14" fill="#a0673c" :stroke="INK" stroke-width="3.5" />
+        <circle cx="32" cy="62" r="7" fill="#f0c99a" />
+        <circle cx="108" cy="62" r="7" fill="#f0c99a" />
+        <circle cx="70" cy="62" r="34" fill="#b0774a" :stroke="INK" stroke-width="3.5" />
+        <path d="M70 46 C62 36 44 40 46 56 C40 64 44 86 70 90 C96 86 100 64 94 56 C96 40 78 36 70 46 Z" fill="#f0c99a" />
+        <circle cx="66" cy="74" r="1.8" :fill="INK" /><circle cx="74" cy="74" r="1.8" :fill="INK" />
+        <!-- banan -->
+        <path d="M86 112 Q104 100 102 82 Q110 98 96 116 Z" fill="#ffd23f" :stroke="INK" stroke-width="2.5" stroke-linejoin="round" />
       </template>
 
       <!-- ================= MYSZ ================= -->
@@ -349,7 +431,7 @@ const face = computed(() => {
         </template>
       </g>
       <ellipse v-for="(c, i) in face.cheeks" :key="`c${i}`" :cx="c[0]" :cy="c[1]" rx="7" ry="4.5" fill="#ff8fa3" opacity=".7" />
-      <template v-if="kind === 'kaczka' || kind === 'bobr' || kind === 'papuga'" />
+      <template v-if="kind === 'kaczka' || kind === 'bobr' || kind === 'papuga' || kind === 'kogut'" />
       <path v-else-if="mood === 'happy' || mood === 'joy'" :d="`M${face.mouth[0] - 9} ${face.mouth[1]} Q${face.mouth[0]} ${face.mouth[1] + 12} ${face.mouth[0] + 9} ${face.mouth[1]} Z`" fill="#c2364b" :stroke="INK" stroke-width="3" stroke-linejoin="round" />
       <ellipse v-else-if="mood === 'wow'" :cx="face.mouth[0]" :cy="face.mouth[1] + 4" rx="6" ry="7" fill="#c2364b" :stroke="INK" stroke-width="3" />
       <path v-else-if="mood === 'think'" :d="`M${face.mouth[0] - 7} ${face.mouth[1] + 4} Q${face.mouth[0] + 2} ${face.mouth[1]} ${face.mouth[0] + 8} ${face.mouth[1] + 5}`" fill="none" :stroke="INK" stroke-width="3" stroke-linecap="round" />

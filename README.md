@@ -63,6 +63,11 @@ server/routes/              sitemap.xml, robots.txt
 | Domek Przyimków | Myszka Zuzia 🐭 | прийменники |
 | Pajęcza Sieć | Pająk Piotruś 🕷️ | сполучники й кома |
 | Mrowisko Zdań | Mrówka Marta 🐜 | речення, підмет/присудок, члени речення |
+| Lisia Nora | Lis Leon 🦊 | іменник: рід, число, власні назви |
+| Wesoły Kurnik | Kogut Kuba 🐓 | вигуки, звуконаслідування, частки, -by |
+| Arena Części Mowy | Lew Leopold 🦁 | усі 10 частин мови, змінні/незмінні |
+| Kopalnia Słów | Kret Kazik ⛏️ | словотвір: родини, зменшувальні, префікси, професії |
+| Teatr Powiedzonek | Małpka Mia 🐒 | фразеологізми |
 
 Зупинка: 💬 провідник розповідає правило кількома репліками (ключові букви **червоним**, `[ó]` у тексті) → 👆 приклади-відкриття → 🎮 гра (тваринка йде дорогою до 🏁 і реагує на відповіді) → 🎫 печатка, зірки, XP.
 Пройдений край = значок + провідник стає другом у паспорті.
@@ -80,7 +85,7 @@ server/routes/              sitemap.xml, robots.txt
 Літери правила (`marks` у `world.ts`) автоматично підсвічуються червоним у всіх текстах краю.
 
 - `app/data/polski/cwiczenia/world.ts` — краї, привітання, **пояснення** (`explain`) до кожної зупинки;
-- `litery.ts` (ó/u, rz/ż, ch/h), `litery2.ts` (cz/ć…, ę/ą), `dyktando.ts`, `przypadki.ts`, `liczebniki.ts`, `przymiotniki.ts`, `czasowniki.ts`, `zaimki.ts`, `przyslowki.ts`, `przyimki.ts`, `spojniki.ts`, `zdanie.ts`, `wielka.ts` (спільні помічники — `helpers.ts`) — правила, приклади, слова й речення;
+- `litery.ts` (ó/u, rz/ż, ch/h), `litery2.ts` (cz/ć…, ę/ą), `dyktando.ts`, `przypadki.ts`, `liczebniki.ts`, `przymiotniki.ts`, `czasowniki.ts`, `zaimki.ts`, `przyslowki.ts`, `przyimki.ts`, `spojniki.ts`, `zdanie.ts`, `wielka.ts`, `rzeczownik.ts`, `partykuly.ts`, `czesci.ts`, `slowa.ts` (спільні помічники — `helpers.ts`) — правила, приклади, слова й речення;
 - `components/Animal.vue` — звірятка (SVG, настрої: happy/joy/wow/think/sad);
 - `components/WorldScene.vue` — небо, хмари, пагорби краю; `components/Rich.vue` — текст з червоними `[буквами]`.
 

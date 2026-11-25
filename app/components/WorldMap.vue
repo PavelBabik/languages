@@ -14,12 +14,12 @@ const { t, loc, showPl } = useT()
 const lp = useLocalePath()
 
 /* współrzędne środków wysp w % (poziomo / pionowo) */
-const DESK = [[13, 12], [37, 16], [61, 10], [86, 14], [86, 37], [61, 33], [37, 38], [13, 34], [13, 61], [37, 65], [61, 59], [86, 63], [86, 86], [61, 82], [37, 87], [13, 83]] as const
-const MOB = [[27, 4.5], [73, 10.3], [27, 16.1], [73, 21.9], [27, 27.7], [73, 33.5], [27, 39.3], [73, 45.1], [27, 50.9], [73, 56.7], [27, 62.5], [73, 68.3], [27, 74.1], [73, 79.9], [27, 85.7], [73, 91.5]] as const
+const DESK = [[13, 5.5], [37, 8.0], [61, 4.5], [86, 7.0], [86, 22.3], [61, 24.8], [37, 21.3], [13, 23.8], [13, 39.1], [37, 41.6], [61, 38.1], [86, 40.6], [86, 55.9], [61, 58.4], [37, 54.9], [13, 57.4], [13, 72.7], [37, 75.2], [61, 71.7], [86, 74.2], [86, 89.5]] as const
+const MOB = [[27, 3.4], [73, 7.8], [27, 12.3], [73, 16.8], [27, 21.2], [73, 25.6], [27, 30.1], [73, 34.6], [27, 39.0], [73, 43.5], [27, 47.9], [73, 52.4], [27, 56.8], [73, 61.2], [27, 65.7], [73, 70.2], [27, 74.6], [73, 79.1], [27, 83.5], [73, 88.0], [27, 92.4]] as const
 const SOON_DESK = [[66, 87]] as const
 const SOON_MOB = [[73, 88]] as const
-const H_DESK = 140
-const H_MOB = 720
+const H_DESK = 210
+const H_MOB = 940
 
 const current = computed(() => {
   const i = props.list.findIndex(x => !x.st.complete)
@@ -65,11 +65,11 @@ const land = (x: { ex: Exercise }) => x.ex.land as Land
     <span class="sea sea--ship deco" aria-hidden="true">⛵</span>
 
     <!-- droga -->
-    <svg class="road road--d" viewBox="0 0 100 140" preserveAspectRatio="none" aria-hidden="true">
+    <svg class="road road--d" viewBox="0 0 100 210" preserveAspectRatio="none" aria-hidden="true">
       <path :d="full.d" class="road__all" />
       <path v-if="done.d" :d="done.d" class="road__done" />
     </svg>
-    <svg class="road road--m" viewBox="0 0 100 720" preserveAspectRatio="none" aria-hidden="true">
+    <svg class="road road--m" viewBox="0 0 100 940" preserveAspectRatio="none" aria-hidden="true">
       <path :d="full.m" class="road__all" />
       <path v-if="done.m" :d="done.m" class="road__done" />
     </svg>
@@ -126,7 +126,7 @@ const land = (x: { ex: Exercise }) => x.ex.land as Land
 <style scoped>
 .map {
   position: relative;
-  aspect-ratio: 100 / 140;
+  aspect-ratio: 100 / 210;
   margin-top: 30px;
   overflow: hidden;
   background:
@@ -156,10 +156,10 @@ const land = (x: { ex: Exercise }) => x.ex.land as Land
 
 .sea { position: absolute; z-index: 1; line-height: 1; filter: drop-shadow(2px 3px 0 rgb(31 29 54 / .2)); }
 .sea--compass { top: 18px; left: 20px; font-size: 54px; animation: spin 30s linear infinite; }
-.sea--whale { left: 50%; top: 96%; font-size: 40px; animation: float 4s ease-in-out infinite; }
-.sea--octo { left: 50%; top: 48%; font-size: 34px; animation: float 5s ease-in-out infinite 1s; }
-.sea--fish { left: 25%; top: 26%; font-size: 26px; animation: swim 9s ease-in-out infinite; }
-.sea--ship { top: 74%; left: -6%; font-size: 40px; animation: sail 40s linear infinite; }
+.sea--whale { left: 60%; top: 92%; font-size: 40px; animation: float 4s ease-in-out infinite; }
+.sea--octo { left: 50%; top: 32%; font-size: 34px; animation: float 5s ease-in-out infinite 1s; }
+.sea--fish { left: 25%; top: 66%; font-size: 26px; animation: swim 9s ease-in-out infinite; }
+.sea--ship { top: 48%; left: -6%; font-size: 40px; animation: sail 40s linear infinite; }
 @keyframes spin { to { rotate: 360deg; } }
 @keyframes swim { 0%, 100% { translate: 0 0; } 50% { translate: 60px -10px; scale: -1 1; } }
 @keyframes sail { 0% { left: -6%; translate: 0 0; } 50% { translate: 0 -12px; } 100% { left: 104%; translate: 0 0; } }
@@ -254,7 +254,7 @@ a.isl:hover { transform: translateY(-8px) scale(1.04); z-index: 5; }
   .isl__shape { width: 140px; height: 78px; }
 }
 @media (max-width: 760px) {
-  .map { aspect-ratio: 100 / 720; border-radius: 28px; }
+  .map { aspect-ratio: 100 / 940; border-radius: 28px; }
   .road--d { display: none; }
   .road--m { display: block; }
   .isl { left: calc(var(--mx) * 1%); top: calc(var(--my) * 1%); width: 140px; }
